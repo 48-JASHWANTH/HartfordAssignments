@@ -4,121 +4,242 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Farmhouse Booking</title>
+    <style>
+      h1 {
+        color: green;
+        text-align: center;
+      }
+
+      h2 {
+        color: green;
+      }
+
+      nav {
+        background-color: green;
+        padding: 15px 30px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        border-radius: 100px;
+      }
+
+      nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        gap: 30px;
+      }
+
+      nav a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 16px;
+      }
+
+      nav a:hover {
+        text-decoration: underline;
+      }
+
+      main {
+        min-height: 70vh;
+        padding: 20px;
+      }
+
+      footer {
+        background-color: green;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        margin-top: 40px;
+        border-radius: 100px;
+      }
+
+      footer a {
+        color: white;
+        text-decoration: underline;
+      }
+
+      .social-links {
+        margin-top: 15px;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+      }
+
+      .social-links a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+        padding: 8px 15px;
+        border: 2px solid white;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+      }
+
+      .social-links a:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+      }
+
+      .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+      }
+
+      .container img,
+      .container video {
+        width: 80%;
+        height: 300px;
+        display: block;
+      }
+
+      .container iframe {
+        border: 2px solid green;
+      }
+
+      form {
+        padding: 20px;
+        margin-top: 20px;
+        width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      fieldset {
+        border: 2px solid green;
+        padding: 25px;
+        margin-bottom: 20px;
+        border-radius: 40px;
+      }
+
+      legend {
+        color: green;
+        font-weight: bold;
+      }
+
+      input,
+      textarea {
+        width: 100%;
+        padding: 5px;
+        margin-bottom: 10px;
+      }
+
+      .book-btn {
+        background-color: green;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        text-decoration: none;
+        display: inline-block;
+        cursor: pointer;
+      }
+    </style>
   </head>
   <body>
-    <h1 style="color: green; text-align: center">
-      Farmhouse Rental Booking Form
-    </h1>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#booking">Booking</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
 
-    <div
-      style="display: flex; justify-content: space-between; align-items:flex-start; "
-    >
-      <div>
-        <h2 style="color: green">Farmhouse</h2>
-        <img
-          src="https://images.unsplash.com/photo-1449158743715-0a90ebb6d2d8?w=600"
-          alt="Farmhouse"
-          style="width: 80%; height: 300px; display: block"
-        />
-      </div>
-
-      <div>
-        <h2 style="color: green">Video Tour</h2>
-        <video controls style="width: 80%; height: 300px">
-          <source
-            src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4"
+    <main>
+      <h1>RJ Farmhouse Rental Booking</h1>
+      <div class="container">
+        <div>
+          <h2>Farmhouse</h2>
+          <img
+            src="https://images.unsplash.com/photo-1449158743715-0a90ebb6d2d8?w=600"
+            alt="Farmhouse"
           />
-        </video>
+        </div>
+
+        <div>
+          <h2>Video Tour</h2>
+          <video controls>
+            <source
+              src="https://dm0qx8t0i9gc9.cloudfront.net/watermarks/video/-WJrCTm/videoblocks-2018-10-30-colden-house020_baudabux___6e4cbb11085831e97dc2c229be23642f__P360.mp4"
+              type="video/mp4"
+            />
+          </video>
+        </div>
+
+        <div>
+          <h2>Location</h2>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.2219901290355!2d-74.00369368400567!3d40.71312937933041!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a316e3ea5e5%3A0x36b2e3d5e5d5e5e5!2sNew%20York%2C%20NY!5e0!3m2!1sen!2sus!4v1234567890123"
+            width="100%"
+            height="300"
+          ></iframe>
+        </div>
       </div>
 
-      <div>
-        <h2 style="color: green">Location</h2>
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.2219901290355!2d-74.00369368400567!3d40.71312937933041!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a316e3ea5e5%3A0x36b2e3d5e5d5e5e5!2sNew%20York%2C%20NY!5e0!3m2!1sen!2sus!4v1234567890123"
-          width="100%" height="300" style="border: 2px solid green"
-        ></iframe>
+      <form action="/submit" method="post">
+        <fieldset>
+          <legend>Personal Details</legend>
+
+          <label>Username:</label><br />
+          <input type="text" name="username" required /><br />
+
+          <label>Email:</label><br />
+          <input type="email" name="email" required /><br />
+
+          <label>Phone:</label><br />
+          <input type="tel" name="phone" required /><br />
+
+          <label>Age:</label><br />
+          <input type="number" name="age" min="18" /><br />
+
+          <label>Address:</label><br />
+          <textarea name="address" rows="3"></textarea>
+        </fieldset>
+
+        <fieldset>
+          <legend>Booking Details</legend>
+
+          <label>Check-in Date:</label><br />
+          <input type="date" name="checkin" required /><br />
+
+          <label>Check-out Date:</label><br />
+          <input type="date" name="checkout" required />
+
+          <br />
+
+          <label>Number of Guests:</label><br />
+          <input type="number" name="guests" min="1" max="20" />
+          <br />
+
+          <label>Number of Rooms:</label><br />
+          <input type="number" name="rooms" min="1" max="10" /><br />
+
+          <label>Special Requests:</label><br />
+          <textarea name="requests" rows="3"></textarea>
+        </fieldset>
+
+        <a
+          href="https://wa.me/9392972552?text=Hi,%20I%20would%20like%20to%20book%20the%20farmhouse"
+          target="_blank"
+          class="book-btn"
+        >
+          Book Now
+        </a>
+      </form>
+    </main>
+
+    <footer>
+      <p>&copy; RJ Farmhouse Rentals. All rights reserved.</p>
+      <p>
+        Contact us: <a href="mailto:ratnajashwanth64@gmail.com">ratnajashwanth64@gmail.com</a> |
+        Phone: +91 9392972552
+      </p>
+      <p>Follow us on social media for updates and special offers!</p>
+      <div class="social-links">
+        <a href="https://www.instagram.com" target="_blank">Instagram</a>
+        <a href="https://www.facebook.com" target="_blank">Facebook</a>
+        <a href="https://www.twitter.com" target="_blank">Twitter</a>
       </div>
-    </div>
-
-    <form
-      action="/submit"
-      method="post"
-      style="padding: 20px; margin-top: 20px; width: 800px; margin-left: auto; margin-right: auto;"
-    >
-      <fieldset
-        style="border: 2px solid green; padding: 15px; margin-bottom: 20px"
-      >
-        <legend style="color: green; font-weight: bold">
-          Personal Details
-        </legend>
-
-        <label>Username:</label><br />
-        <input
-          type="text" name="username" required
-          style="width: 100%; padding: 5px; margin-bottom: 10px"
-        /><br />
-
-        <label>Email:</label><br />
-        <input
-          type="email" name="email" required
-          style="width: 100%; padding: 5px; margin-bottom: 10px"
-        /><br />
-
-        <label>Phone:</label><br />
-        <input
-          type="tel" name="phone" required
-          style="width: 100%; padding: 5px; margin-bottom: 10px"
-        /><br />
-
-        <label>Age:</label><br />
-        <input
-          type="number" name="age" min="18"
-          style="width: 100%; padding: 5px; margin-bottom: 10px"
-        /><br />
-
-        <label>Address:</label><br />
-        <textarea
-          name="address" rows="3"
-          style="width: 100%; padding: 5px; margin-bottom: 10px"
-        ></textarea>
-      </fieldset>
-
-      <fieldset
-        style="border: 2px solid green; padding: 15px; margin-bottom: 20px">
-        <legend style="color: green; font-weight: bold">Booking Details</legend>
-
-        <label>Check-in Date:</label><br />
-        <input type="date" name="checkin" required style="width: 100%; padding: 5px; margin-bottom: 10px"
-        /><br />
-
-        <label>Check-out Date:</label><br />
-        <input type="date" name="checkout" required
-          style="width: 100%; padding: 5px; margin-bottom: 10px"/>
-          
-          <br />
-
-        <label>Number of Guests:</label><br />
-        <input type="number" name="guests" min="1" max="20"
-          style="width: 100%; padding: 5px; margin-bottom: 10px"/>
-          <br />
-
-        <label>Number of Rooms:</label><br />
-        <input type="number" name="rooms" min="1" max="10"
-          style="width: 100%; padding: 5px; margin-bottom: 10px"
-        /><br />
-
-        <label>Special Requests:</label><br />
-        <textarea name="requests" rows="3"
-          style="width: 100%; padding: 5px; margin-bottom: 10px"
-        ></textarea>
-      </fieldset>
-
-      <button
-        type="submit"
-        style="background-color: green; color: white; padding: 10px 20px; border: none;"
->
-        Book Now
-      </button>
-    </form>
+    </footer>
   </body>
 </html>
