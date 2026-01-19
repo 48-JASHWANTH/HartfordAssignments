@@ -1,0 +1,87 @@
+<div class="container">
+  <div class="header">
+    <h1>Customer's Insurance Management System</h1>
+    <button class="btn btn-primary" (click)="navigateToAdd()">
+      <span class="icon">+</span> Add New Customer
+    </button>
+  </div>
+
+  <div class="customers-list" *ngIf="customers().length > 0; else noCustomers">
+    <div class="customer-card" *ngFor="let customer of customers()">
+      <div class="card-header">
+        <div class="customer-name">
+          <h2>{{ customer.firstName }} {{ customer.lastName }}</h2>
+          <span class="badge" [class.active]="customer.isActive" [class.inactive]="!customer.isActive">
+            {{ customer.isActive ? 'Active' : 'Inactive' }}
+          </span>
+        </div>
+        <div class="customer-id">#{{ customer.id }}</div>
+      </div>
+
+      <div class="card-body">
+        <div class="info-grid">
+          <div class="info-item">
+            <span class="label">Email:</span>
+            <span class="value">{{ customer.email }}</span>
+          </div>
+          <div class="info-item">
+            <span class="label">Phone:</span>
+            <span class="value">{{ customer.phone }}</span>
+          </div>
+          <div class="info-item">
+            <span class="label">Age:</span>
+            <span class="value">{{ customer.age }} years</span>
+          </div>
+          <div class="info-item">
+            <span class="label">Gender:</span>
+            <span class="value">{{ customer.gender }}</span>
+          </div>
+          <div class="info-item">
+            <span class="label">Insurance Type:</span>
+            <span class="value insurance-type">{{ customer.insuranceType }}</span>
+          </div>
+          <div class="info-item">
+            <span class="label">Policy Number:</span>
+            <span class="value">{{ customer.policyNumber }}</span>
+          </div>
+          <div class="info-item">
+            <span class="label">Premium Amount:</span>
+            <span class="value amount">₹{{ customer.premiumAmount | number }}</span>
+          </div>
+          <div class="info-item">
+            <span class="label">Coverage:</span>
+            <span class="value amount">₹{{ customer.coverageAmount | number }}</span>
+          </div>
+          <div class="info-item">
+            <span class="label">City:</span>
+            <span class="value">{{ customer.address.city }}, {{ customer.address.state }}</span>
+          </div>
+          <div class="info-item">
+            <span class="label">Nominee:</span>
+            <span class="value">{{ customer.nomineeName }} ({{ customer.nomineeRelation }})</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-footer">
+        <button class="btn btn-edit" (click)="navigateToEdit(customer.id!)">
+          <span class="icon">✏️</span> Edit
+        </button>
+        <button class="btn btn-delete" (click)="deleteCustomer(customer.id!)">
+          <span class="icon">🗑️</span> Delete
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <ng-template #noCustomers>
+    <div class="empty-state">
+      <div class="empty-icon">📋</div>
+      <h2>No Customers Found</h2>
+      <p>Start by adding your first customer</p>
+      <button class="btn btn-primary" (click)="navigateToAdd()">
+        <span class="icon">+</span> Add Customer
+      </button>
+    </div>
+  </ng-template>
+</div>

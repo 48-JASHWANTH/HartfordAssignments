@@ -1,0 +1,13 @@
+<h2>Delete Customer</h2>
+
+<input
+  type="number"
+  placeholder="Enter Customer ID"
+  [ngModel]="customerId()"
+  (ngModelChange)="customerId.set($event)"
+/>
+
+<br><br>
+
+<button (click)="deleteById()">Delete by ID</button>
+<button (click)="deleteAll()">Delete All</button>
